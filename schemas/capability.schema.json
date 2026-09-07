@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/minex/schemas/capability.schema.json",
+  "title": "MINEX CapabilityManifest",
+  "type": "object",
+  "required": ["capability_id", "name", "provider_id", "owner_realm", "surface", "requires", "provides", "cost", "quality"],
+  "properties": {
+    "capability_id": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "provider_id": {"type": "string"},
+    "owner_realm": {"type": "string"},
+    "surface": {"enum": ["model_native", "local_code", "local_api", "local_gui", "same_owner_peer", "market_service", "human_delegate", "recipe"]},
+    "requires": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "provides": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "quality": {"type": "number", "minimum": 0, "maximum": 1},
+    "authority_scopes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "side_effect": {"enum": ["none", "reversible_local", "reversible_external", "irreversible_external"]},
+    "deterministic": {"type": "boolean"},
+    "cacheable": {"type": "boolean"},
+    "availability": {"type": "boolean"},
+    "cost": {
+      "type": "object",
+      "properties": {
+        "energy_j": {"type": "number", "minimum": 0},
+        "verification_energy_j": {"type": "number", "minimum": 0},
+        "coordination_energy_j": {"type": "number", "minimum": 0},
+        "retry_energy_j": {"type": "number", "minimum": 0},
+        "latency_ms": {"type": "number", "minimum": 0},
+        "money": {"type": "number", "minimum": 0},
+        "human_minutes": {"type": "number", "minimum": 0},
+        "data_exposure": {"type": "number", "minimum": 0, "maximum": 1},
+        "carbon_g": {"type": "number", "minimum": 0},
+        "semantic_loss": {"type": "number", "minimum": 0, "maximum": 1},
+        "failure_probability": {"type": "number", "minimum": 0, "maximum": 1},
+        "measurement_source": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "executor": {"type": "object"},
+    "terms": {"type": "object"},
+    "provenance": {"type": "object"}
+  },
+  "additionalProperties": false
+}

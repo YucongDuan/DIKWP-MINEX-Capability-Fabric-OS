@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/minex/schemas/lease.schema.json",
+  "title": "MINEX Capability Lease",
+  "type": "object",
+  "required": [
+    "lease_id",
+    "capability_id",
+    "provider_id",
+    "consumer_id",
+    "owner_realm",
+    "nonce",
+    "issued_at",
+    "expires_at",
+    "max_calls",
+    "calls_used",
+    "max_money",
+    "external_action_authority",
+    "signature"
+  ],
+  "properties": {
+    "lease_id": {
+      "type": "string"
+    },
+    "capability_id": {
+      "type": "string"
+    },
+    "provider_id": {
+      "type": "string"
+    },
+    "consumer_id": {
+      "type": "string"
+    },
+    "owner_realm": {
+      "type": "string"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "max_calls": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "calls_used": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_money": {
+      "type": "number",
+      "minimum": 0
+    },
+    "external_action_authority": {
+      "const": 0
+    },
+    "signature": {
+      "type": "string"
+    },
+    "nonce": {
+      "type": "string",
+      "minLength": 16,
+      "maxLength": 128
+    }
+  },
+  "additionalProperties": false
+}

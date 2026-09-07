@@ -1,0 +1,46 @@
+{
+  "bids": [
+    {
+      "available": true,
+      "capability_id": "peer-fast-summary",
+      "currency": "USD",
+      "expected_energy_j": 22,
+      "money": 0.0,
+      "owner_realm": "local-owner",
+      "provider_id": "peer-node-02",
+      "provides": [
+        "text.summary"
+      ],
+      "quality": 0.95,
+      "same_owner_only": true
+    },
+    {
+      "available": true,
+      "capability_id": "market-certified-summary",
+      "currency": "USD",
+      "expected_energy_j": 40,
+      "money": 0.2,
+      "owner_realm": "external-provider",
+      "provider_id": "provider-17",
+      "provides": [
+        "text.summary"
+      ],
+      "quality": 0.98,
+      "same_owner_only": false
+    },
+    {
+      "available": true,
+      "capability_id": "human-summary",
+      "currency": "USD",
+      "expected_energy_j": 0,
+      "money": 12.0,
+      "owner_realm": "external-provider",
+      "provider_id": "human-network",
+      "provides": [
+        "text.summary"
+      ],
+      "quality": 0.995,
+      "same_owner_only": false
+    }
+  ]
+}

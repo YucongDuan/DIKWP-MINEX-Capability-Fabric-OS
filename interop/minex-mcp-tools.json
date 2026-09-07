@@ -1,0 +1,71 @@
+{
+  "protocolVersion": "2026-07-28",
+  "tools": [
+    {
+      "description": "Plan a Pareto-efficient, authority-bounded capability route for an intent.",
+      "inputSchema": {
+        "properties": {
+          "catalog": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "intent": {
+            "type": "object"
+          },
+          "max_steps": {
+            "default": 6,
+            "maximum": 12,
+            "minimum": 1,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "intent",
+          "catalog"
+        ],
+        "type": "object"
+      },
+      "name": "minex_plan_intent"
+    },
+    {
+      "description": "Return the Pareto frontier and explain rejected routes without executing them.",
+      "inputSchema": {
+        "properties": {
+          "catalog": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "intent": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "intent",
+          "catalog"
+        ],
+        "type": "object"
+      },
+      "name": "minex_compare_routes"
+    },
+    {
+      "description": "Verify an append-only MINEX responsibility ledger.",
+      "inputSchema": {
+        "properties": {
+          "ledger_jsonl": {
+            "maxLength": 2000000,
+            "type": "string"
+          }
+        },
+        "required": [
+          "ledger_jsonl"
+        ],
+        "type": "object"
+      },
+      "name": "minex_verify_ledger"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "case_count": 13,
+  "checks": [
+    {
+      "case": "intent",
+      "errors": [],
+      "schema": "intent.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:model-native-full-brief",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:local-text-stats",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:local-extractive-summary",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:local-markdown-compose",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:local-api-brief",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:legacy-gui-brief",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:peer-verified-summary",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:market-certified-brief",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "capability:human-domain-editor",
+      "errors": [],
+      "schema": "capability.schema.json",
+      "valid": true
+    },
+    {
+      "case": "plan",
+      "errors": [],
+      "schema": "plan.schema.json",
+      "valid": true
+    },
+    {
+      "case": "receipt",
+      "errors": [],
+      "schema": "receipt.schema.json",
+      "valid": true
+    },
+    {
+      "case": "lease",
+      "errors": [],
+      "schema": "lease.schema.json",
+      "valid": true
+    }
+  ],
+  "passed": true,
+  "validator": "jsonschema Draft 2020-12"
+}

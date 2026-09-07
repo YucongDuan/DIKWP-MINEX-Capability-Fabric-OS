@@ -1,0 +1,113 @@
+{
+  "checked_transitions": 52,
+  "external_proposal_state_reachable": true,
+  "invariant_violations": [],
+  "local_verified_state_reachable": true,
+  "max_shortest_path_depth": 8,
+  "model": "MINEX_BOUNDED_CAPABILITY_LIFECYCLE",
+  "negative_controls": [
+    {
+      "detected": [
+        "EXECUTION_WITHOUT_AUTHORITY"
+      ],
+      "state": {
+        "authority_granted": false,
+        "external_action_authority": 0,
+        "external_action_executed": false,
+        "lease_valid": false,
+        "payment_executed": false,
+        "phase": "EXECUTED",
+        "receipt_valid": false,
+        "route": "local",
+        "settlement_proposed": false,
+        "stopped": false,
+        "successor": false,
+        "successor_reauthorized": false
+      }
+    },
+    {
+      "detected": [
+        "PEER_EXECUTION_WITHOUT_VALID_LEASE",
+        "SUCCESSOR_INHERITED_AUTHORITY"
+      ],
+      "state": {
+        "authority_granted": true,
+        "external_action_authority": 0,
+        "external_action_executed": false,
+        "lease_valid": false,
+        "payment_executed": false,
+        "phase": "EXECUTED",
+        "receipt_valid": false,
+        "route": "peer",
+        "settlement_proposed": false,
+        "stopped": false,
+        "successor": true,
+        "successor_reauthorized": false
+      }
+    },
+    {
+      "detected": [
+        "REFERENCE_CORE_EXECUTED_EXTERNAL_ROUTE"
+      ],
+      "state": {
+        "authority_granted": true,
+        "external_action_authority": 0,
+        "external_action_executed": false,
+        "lease_valid": false,
+        "payment_executed": false,
+        "phase": "EXECUTED",
+        "receipt_valid": false,
+        "route": "market",
+        "settlement_proposed": false,
+        "stopped": false,
+        "successor": false,
+        "successor_reauthorized": false
+      }
+    },
+    {
+      "detected": [
+        "SETTLEMENT_WITHOUT_RECEIPT"
+      ],
+      "state": {
+        "authority_granted": true,
+        "external_action_authority": 0,
+        "external_action_executed": false,
+        "lease_valid": false,
+        "payment_executed": false,
+        "phase": "SETTLEMENT_PROPOSED",
+        "receipt_valid": false,
+        "route": "local",
+        "settlement_proposed": true,
+        "stopped": false,
+        "successor": false,
+        "successor_reauthorized": false
+      }
+    },
+    {
+      "detected": [
+        "AUTOMATIC_PAYMENT_OCCURRED"
+      ],
+      "state": {
+        "authority_granted": false,
+        "external_action_authority": 0,
+        "external_action_executed": false,
+        "lease_valid": false,
+        "payment_executed": true,
+        "phase": "STOPPED",
+        "receipt_valid": false,
+        "route": "none",
+        "settlement_proposed": false,
+        "stopped": true,
+        "successor": false,
+        "successor_reauthorized": false
+      }
+    }
+  ],
+  "negative_controls_passed": true,
+  "passed": true,
+  "peer_verified_state_reachable": true,
+  "reachable_states": 43,
+  "scope": "Finite reference lifecycle only; not a proof for arbitrary integrations, physical energy claims, or external providers.",
+  "settlement_proposal_reachable": true,
+  "stopped_state_reachable": true
+}

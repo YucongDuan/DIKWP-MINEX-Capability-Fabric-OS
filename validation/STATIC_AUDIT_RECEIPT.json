@@ -1,0 +1,10 @@
+{
+  "audit": "MINEX_STATIC_AUDIT",
+  "findings": [],
+  "notes": [
+    "api.py and peer.py intentionally use Python's local HTTP server. Non-loopback binding requires an explicit flag.",
+    "The audit is a narrow static check, not a security certification."
+  ],
+  "passed": true,
+  "python_modules_scanned": 22
+}

@@ -1,0 +1,357 @@
+{
+  "capabilities": [
+    {
+      "authority_scopes": [
+        "data.read"
+      ],
+      "capability_id": "model-native-full-brief",
+      "cost": {
+        "carbon_g": 0.12,
+        "coordination_energy_j": 20,
+        "data_exposure": 0.25,
+        "energy_j": 900,
+        "failure_probability": 0.18,
+        "human_minutes": 6,
+        "latency_ms": 12000,
+        "measurement_source": "declared",
+        "money": 0.05,
+        "retry_energy_j": 1100,
+        "semantic_loss": 0.18,
+        "verification_energy_j": 120
+      },
+      "description": "A frontier model produces the full brief without a separate application.",
+      "executor": {
+        "kind": "provider_required"
+      },
+      "name": "Model-native full brief",
+      "owner_realm": "local-owner",
+      "provider_id": "model-provider",
+      "provides": [
+        "report.markdown"
+      ],
+      "quality": 0.84,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "none",
+      "surface": "model_native"
+    },
+    {
+      "authority_scopes": [
+        "data.read"
+      ],
+      "cacheable": true,
+      "capability_id": "local-text-stats",
+      "cost": {
+        "carbon_g": 0.0003,
+        "coordination_energy_j": 0.2,
+        "data_exposure": 0,
+        "energy_j": 2,
+        "failure_probability": 0.003,
+        "human_minutes": 0,
+        "latency_ms": 70,
+        "measurement_source": "declared",
+        "money": 0,
+        "retry_energy_j": 2,
+        "semantic_loss": 0,
+        "verification_energy_j": 0.5
+      },
+      "description": "Deterministic local text profiling.",
+      "deterministic": true,
+      "executor": {
+        "handler": "text_stats",
+        "kind": "builtin"
+      },
+      "name": "Local text statistics",
+      "owner_realm": "local-owner",
+      "provider_id": "local-core",
+      "provides": [
+        "text.stats"
+      ],
+      "quality": 0.999,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "none",
+      "surface": "local_code"
+    },
+    {
+      "authority_scopes": [
+        "data.read"
+      ],
+      "cacheable": true,
+      "capability_id": "local-extractive-summary",
+      "cost": {
+        "carbon_g": 0.001,
+        "coordination_energy_j": 0.5,
+        "data_exposure": 0,
+        "energy_j": 6,
+        "failure_probability": 0.01,
+        "human_minutes": 0.2,
+        "latency_ms": 180,
+        "measurement_source": "declared",
+        "money": 0,
+        "retry_energy_j": 5,
+        "semantic_loss": 0.06,
+        "verification_energy_j": 1
+      },
+      "description": "A deterministic, source-preserving summary step.",
+      "deterministic": true,
+      "executor": {
+        "handler": "extractive_summary",
+        "kind": "builtin",
+        "options": {
+          "sentences": 5
+        }
+      },
+      "name": "Local extractive summary",
+      "owner_realm": "local-owner",
+      "provider_id": "local-core",
+      "provides": [
+        "text.summary"
+      ],
+      "quality": 0.93,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "none",
+      "surface": "local_code"
+    },
+    {
+      "authority_scopes": [
+        "data.read"
+      ],
+      "cacheable": true,
+      "capability_id": "local-markdown-compose",
+      "cost": {
+        "carbon_g": 0.0005,
+        "coordination_energy_j": 0.4,
+        "data_exposure": 0,
+        "energy_j": 3,
+        "failure_probability": 0.005,
+        "human_minutes": 0,
+        "latency_ms": 100,
+        "measurement_source": "declared",
+        "money": 0,
+        "retry_energy_j": 3,
+        "semantic_loss": 0.01,
+        "verification_energy_j": 1
+      },
+      "description": "Build a structured brief from verified local outputs.",
+      "deterministic": true,
+      "executor": {
+        "handler": "compose_markdown",
+        "kind": "builtin",
+        "options": {
+          "title": "MINEX Model-First Capability Brief"
+        }
+      },
+      "name": "Local Markdown composition",
+      "owner_realm": "local-owner",
+      "provider_id": "local-core",
+      "provides": [
+        "report.markdown"
+      ],
+      "quality": 0.99,
+      "requires": [
+        "text.stats",
+        "text.summary"
+      ],
+      "side_effect": "reversible_local",
+      "surface": "local_code"
+    },
+    {
+      "authority_scopes": [
+        "data.read",
+        "app.invoke"
+      ],
+      "capability_id": "local-api-brief",
+      "cost": {
+        "carbon_g": 0.006,
+        "coordination_energy_j": 3,
+        "data_exposure": 0.05,
+        "energy_j": 35,
+        "failure_probability": 0.025,
+        "human_minutes": 0.5,
+        "latency_ms": 800,
+        "measurement_source": "declared",
+        "money": 0.01,
+        "retry_energy_j": 40,
+        "semantic_loss": 0.03,
+        "verification_energy_j": 8
+      },
+      "description": "Use a formal API exposed by an installed application.",
+      "executor": {
+        "kind": "adapter_required"
+      },
+      "name": "Local application API brief",
+      "owner_realm": "local-owner",
+      "provider_id": "local-app",
+      "provides": [
+        "report.markdown"
+      ],
+      "quality": 0.95,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "reversible_local",
+      "surface": "local_api"
+    },
+    {
+      "authority_scopes": [
+        "data.read",
+        "gui.control"
+      ],
+      "capability_id": "legacy-gui-brief",
+      "cost": {
+        "carbon_g": 0.09,
+        "coordination_energy_j": 40,
+        "data_exposure": 0.02,
+        "energy_j": 520,
+        "failure_probability": 0.12,
+        "human_minutes": 3,
+        "latency_ms": 90000,
+        "measurement_source": "declared",
+        "money": 0,
+        "retry_energy_j": 600,
+        "semantic_loss": 0.04,
+        "verification_energy_j": 90
+      },
+      "description": "Operate an installed application through its human interface.",
+      "executor": {
+        "kind": "gui_adapter_required"
+      },
+      "name": "Legacy GUI automation",
+      "owner_realm": "local-owner",
+      "provider_id": "legacy-app",
+      "provides": [
+        "report.markdown"
+      ],
+      "quality": 0.91,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "reversible_local",
+      "surface": "local_gui"
+    },
+    {
+      "authority_scopes": [
+        "data.read",
+        "peer.invoke"
+      ],
+      "capability_id": "peer-verified-summary",
+      "cost": {
+        "carbon_g": 0.004,
+        "coordination_energy_j": 4,
+        "data_exposure": 0.18,
+        "energy_j": 18,
+        "failure_probability": 0.025,
+        "human_minutes": 0,
+        "latency_ms": 450,
+        "measurement_source": "provider-declared",
+        "money": 0,
+        "retry_energy_j": 20,
+        "semantic_loss": 0.025,
+        "verification_energy_j": 3
+      },
+      "description": "Borrow a summary capability from another authorized computer in the same owner realm.",
+      "executor": {
+        "kind": "peer_required"
+      },
+      "name": "Same-owner peer summary",
+      "owner_realm": "local-owner",
+      "provider_id": "peer-node-02",
+      "provides": [
+        "text.summary"
+      ],
+      "quality": 0.96,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "reversible_external",
+      "surface": "same_owner_peer",
+      "terms": {
+        "lease_ttl_seconds": 900,
+        "same_owner_only": true
+      }
+    },
+    {
+      "authority_scopes": [
+        "data.read",
+        "market.purchase"
+      ],
+      "capability_id": "market-certified-brief",
+      "cost": {
+        "carbon_g": 0.02,
+        "coordination_energy_j": 12,
+        "data_exposure": 0.45,
+        "energy_j": 80,
+        "failure_probability": 0.01,
+        "human_minutes": 1,
+        "latency_ms": 4500,
+        "measurement_source": "provider-declared",
+        "money": 0.65,
+        "retry_energy_j": 100,
+        "semantic_loss": 0.015,
+        "verification_energy_j": 20
+      },
+      "description": "Purchase a high-confidence brief from a third-party capability provider.",
+      "executor": {
+        "kind": "market_provider_required"
+      },
+      "name": "Paid verified briefing service",
+      "owner_realm": "external-provider",
+      "provider_id": "market-provider-17",
+      "provides": [
+        "report.markdown"
+      ],
+      "quality": 0.985,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "reversible_external",
+      "surface": "market_service",
+      "terms": {
+        "currency": "USD",
+        "refund_on_verified_failure": true
+      }
+    },
+    {
+      "authority_scopes": [
+        "data.read",
+        "human.delegate"
+      ],
+      "capability_id": "human-domain-editor",
+      "cost": {
+        "carbon_g": 0,
+        "coordination_energy_j": 5,
+        "data_exposure": 0.5,
+        "energy_j": 0,
+        "failure_probability": 0.02,
+        "human_minutes": 30,
+        "latency_ms": 1800000,
+        "measurement_source": "not-physically-measured",
+        "money": 25,
+        "retry_energy_j": 0,
+        "semantic_loss": 0.01,
+        "verification_energy_j": 0
+      },
+      "description": "Delegate the brief to a named human expert.",
+      "executor": {
+        "kind": "human_required"
+      },
+      "name": "Human domain editor",
+      "owner_realm": "external-provider",
+      "provider_id": "human-review-network",
+      "provides": [
+        "report.markdown"
+      ],
+      "quality": 0.99,
+      "requires": [
+        "text.raw"
+      ],
+      "side_effect": "reversible_external",
+      "surface": "human_delegate"
+    }
+  ]
+}

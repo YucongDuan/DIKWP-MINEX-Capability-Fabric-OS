@@ -1,0 +1,288 @@
+{
+  "automated_tests": {
+    "failed": 0,
+    "passed": 32
+  },
+  "bounded_model_check": {
+    "checked_transitions": 52,
+    "external_proposal_state_reachable": true,
+    "invariant_violations": [],
+    "local_verified_state_reachable": true,
+    "max_shortest_path_depth": 8,
+    "model": "MINEX_BOUNDED_CAPABILITY_LIFECYCLE",
+    "negative_controls": [
+      {
+        "detected": [
+          "EXECUTION_WITHOUT_AUTHORITY"
+        ],
+        "state": {
+          "authority_granted": false,
+          "external_action_authority": 0,
+          "external_action_executed": false,
+          "lease_valid": false,
+          "payment_executed": false,
+          "phase": "EXECUTED",
+          "receipt_valid": false,
+          "route": "local",
+          "settlement_proposed": false,
+          "stopped": false,
+          "successor": false,
+          "successor_reauthorized": false
+        }
+      },
+      {
+        "detected": [
+          "PEER_EXECUTION_WITHOUT_VALID_LEASE",
+          "SUCCESSOR_INHERITED_AUTHORITY"
+        ],
+        "state": {
+          "authority_granted": true,
+          "external_action_authority": 0,
+          "external_action_executed": false,
+          "lease_valid": false,
+          "payment_executed": false,
+          "phase": "EXECUTED",
+          "receipt_valid": false,
+          "route": "peer",
+          "settlement_proposed": false,
+          "stopped": false,
+          "successor": true,
+          "successor_reauthorized": false
+        }
+      },
+      {
+        "detected": [
+          "REFERENCE_CORE_EXECUTED_EXTERNAL_ROUTE"
+        ],
+        "state": {
+          "authority_granted": true,
+          "external_action_authority": 0,
+          "external_action_executed": false,
+          "lease_valid": false,
+          "payment_executed": false,
+          "phase": "EXECUTED",
+          "receipt_valid": false,
+          "route": "market",
+          "settlement_proposed": false,
+          "stopped": false,
+          "successor": false,
+          "successor_reauthorized": false
+        }
+      },
+      {
+        "detected": [
+          "SETTLEMENT_WITHOUT_RECEIPT"
+        ],
+        "state": {
+          "authority_granted": true,
+          "external_action_authority": 0,
+          "external_action_executed": false,
+          "lease_valid": false,
+          "payment_executed": false,
+          "phase": "SETTLEMENT_PROPOSED",
+          "receipt_valid": false,
+          "route": "local",
+          "settlement_proposed": true,
+          "stopped": false,
+          "successor": false,
+          "successor_reauthorized": false
+        }
+      },
+      {
+        "detected": [
+          "AUTOMATIC_PAYMENT_OCCURRED"
+        ],
+        "state": {
+          "authority_granted": false,
+          "external_action_authority": 0,
+          "external_action_executed": false,
+          "lease_valid": false,
+          "payment_executed": true,
+          "phase": "STOPPED",
+          "receipt_valid": false,
+          "route": "none",
+          "settlement_proposed": false,
+          "stopped": true,
+          "successor": false,
+          "successor_reauthorized": false
+        }
+      }
+    ],
+    "negative_controls_passed": true,
+    "passed": true,
+    "peer_verified_state_reachable": true,
+    "reachable_states": 43,
+    "scope": "Finite reference lifecycle only; not a proof for arbitrary integrations, physical energy claims, or external providers.",
+    "settlement_proposal_reachable": true,
+    "stopped_state_reachable": true
+  },
+  "browser_smoke": {
+    "console_errors": [],
+    "deterministic_route_id": true,
+    "language_toggle_after": "English",
+    "language_toggle_before": "中文",
+    "page_errors": [],
+    "receipt_present": true,
+    "route_id": "route-e55784e2",
+    "route_id_second": "route-e55784e2",
+    "screenshot": "/mnt/data/work_functionweave/DIKWP_MINEX_CAPABILITY_FABRIC_OS_v1.0.0/validation/DIKWP_MINEX_BROWSER_SCREENSHOT_v1.0.0.png",
+    "selected_route_text": "local-text-stats → local-extractive-summary → local-markdown-compose\nExpected energy 14.78 J · 0.35 s · quality 0.86 · score 0.0379",
+    "unexpected_network_requests": [],
+    "why_panel": "Hard gates passed.\n\nThe route is on the Pareto frontier and has the lowest normalized score under your declared weights.\n\nExecution surfaces: local_code\nRequired scopes: data.read\nAuthority rule: no selected capability may expand the scopes you granted."
+  },
+  "constitutional_invariants": {
+    "automatic_contract_authority": 0,
+    "automatic_external_action_authority": 0,
+    "automatic_payment_authority": 0,
+    "automatic_remote_publication_authority": 0,
+    "successor_authority_requires_reauthorization": true
+  },
+  "default_capabilities": 9,
+  "demo": {
+    "declared_expected_energy_j": 14.782315893419051,
+    "execution_status": "COMPLETED_LOCAL_REVERSIBLE",
+    "ledger": {
+      "events": 2,
+      "last_digest": "1a8e5eda7d0a3495e01aafbd60d9f5170f97443797756d3c9cac6c7b7b034435",
+      "valid": true
+    },
+    "quality": 0.860034345641955,
+    "selected_route": [
+      "local-extractive-summary",
+      "local-text-stats",
+      "local-markdown-compose"
+    ]
+  },
+  "execution_surfaces": 8,
+  "limitations": [
+    "Declared energy values are not physical measurements unless a route receipt identifies a measurement source.",
+    "The route search is bounded and does not prove a global optimum over all possible capabilities.",
+    "The finite-state checker covers the declared reference lifecycle only.",
+    "The reference market produces settlement proposals and does not move money.",
+    "GUI, external API, and model-provider execution require separately governed adapters."
+  ],
+  "mcp_tools": 3,
+  "protocol": "MINEX-1000:2026-DRAFT",
+  "python_modules": 22,
+  "python_source_lines": 2093,
+  "reports": {
+    "chinese_docx_a11y": {
+      "high": 0,
+      "low": 0,
+      "medium": 0
+    },
+    "chinese_pdf_pages": 16,
+    "english_docx_a11y": {
+      "high": 0,
+      "low": 0,
+      "medium": 0
+    },
+    "english_pdf_pages": 12,
+    "pdf_preflight": {
+      "encrypted": false,
+      "likely_scanned": false,
+      "openable": true
+    }
+  },
+  "schema_validation": {
+    "case_count": 13,
+    "checks": [
+      {
+        "case": "intent",
+        "errors": [],
+        "schema": "intent.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:model-native-full-brief",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:local-text-stats",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:local-extractive-summary",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:local-markdown-compose",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:local-api-brief",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:legacy-gui-brief",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:peer-verified-summary",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:market-certified-brief",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "capability:human-domain-editor",
+        "errors": [],
+        "schema": "capability.schema.json",
+        "valid": true
+      },
+      {
+        "case": "plan",
+        "errors": [],
+        "schema": "plan.schema.json",
+        "valid": true
+      },
+      {
+        "case": "receipt",
+        "errors": [],
+        "schema": "receipt.schema.json",
+        "valid": true
+      },
+      {
+        "case": "lease",
+        "errors": [],
+        "schema": "lease.schema.json",
+        "valid": true
+      }
+    ],
+    "passed": true,
+    "validator": "jsonschema Draft 2020-12"
+  },
+  "static_audit": {
+    "audit": "MINEX_STATIC_AUDIT",
+    "findings": [],
+    "notes": [
+      "api.py and peer.py intentionally use Python's local HTTP server. Non-loopback binding requires an explicit flag.",
+      "The audit is a narrow static check, not a security certification."
+    ],
+    "passed": true,
+    "python_modules_scanned": 22
+  },
+  "status": "RESEARCH_ALPHA_REFERENCE_IMPLEMENTATION",
+  "system": "DIKWP MINEX Capability Fabric OS",
+  "test_files": 7,
+  "test_source_lines": 322,
+  "tested_at_utc": "2026-09-07T01:44:13.407757+00:00",
+  "version": "1.0.0"
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dikwp-minex"
+version = "1.0.0"
+description = "Model-first capability routing, borrowing, and exchange by minimum verified execution expenditure."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Yucong Duan"}]
+keywords = ["agents", "mcp", "a2a", "computer-use", "capability-routing", "energy-efficiency", "tool-use", "open-source"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+  "Topic :: System :: Distributed Computing",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/YucongDuan/DIKWP-MINEX-Capability-Fabric-OS"
+Issues = "https://github.com/YucongDuan/DIKWP-MINEX-Capability-Fabric-OS/issues"
+
+[project.scripts]
+minex = "minexfabric.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/minex/schemas/plan.schema.json",
+  "title": "MINEX Route Plan",
+  "type": "object",
+  "required": ["intent", "intent_digest", "selected_route", "pareto_routes", "all_routes", "automatic_external_action_authority"],
+  "properties": {
+    "intent": {"type": "object"},
+    "intent_digest": {"type": "string"},
+    "selected_route": {"type": ["object", "null"]},
+    "pareto_routes": {"type": "array", "items": {"type": "object"}},
+    "all_routes": {"type": "array", "items": {"type": "object"}},
+    "route_count": {"type": "integer", "minimum": 0},
+    "admissible_count": {"type": "integer", "minimum": 0},
+    "pareto_count": {"type": "integer", "minimum": 0},
+    "authority_invariant": {"type": "string"},
+    "automatic_external_action_authority": {"const": 0}
+  },
+  "additionalProperties": true
+}

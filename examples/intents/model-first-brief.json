@@ -1,0 +1,63 @@
+{
+  "available_types": [
+    "text.raw"
+  ],
+  "constraints": {
+    "allowed_surfaces": [
+      "model_native",
+      "local_code",
+      "local_api",
+      "local_gui",
+      "same_owner_peer",
+      "market_service",
+      "human_delegate",
+      "recipe"
+    ],
+    "external_purchase_allowed": false,
+    "max_data_exposure": 0.25,
+    "max_expected_energy_j": 1500,
+    "max_failure_probability": 0.2,
+    "max_human_minutes": 10,
+    "max_latency_ms": 120000,
+    "max_money": 1.0,
+    "max_semantic_loss": 0.2,
+    "max_side_effect": "reversible_local",
+    "min_quality": 0.82,
+    "network_allowed": false,
+    "normalization_references": {
+      "carbon_g": 0.1,
+      "data_exposure": 0.5,
+      "expected_energy_j": 1000,
+      "failure_probability": 0.2,
+      "human_minutes": 15,
+      "latency_ms": 60000,
+      "money": 1,
+      "semantic_loss": 0.2
+    }
+  },
+  "currency": "USD",
+  "granted_scopes": [
+    "data.read",
+    "app.invoke"
+  ],
+  "inputs": {
+    "text.raw": "New frontier models can choose among direct reasoning, generated code, APIs, browsers, and graphical interfaces. The important design question is no longer which application the user opens first. It is which capability route can satisfy the user's purpose with the lowest verified total expenditure while preserving authority, quality, privacy, and correction. A cheap route that fails and must be repeated may consume more energy and attention than a more reliable route. A function borrowed from another device or purchased from a provider must carry explicit terms, scope, expiry, provenance, and an outcome receipt. Interface access never creates new permission. A model may compress a repeated tool sequence into a reusable recipe, but that procedural internalization does not copy legal rights, proprietary code, or human authorization."
+  },
+  "intent_id": "intent-model-first-brief",
+  "owner_realm": "local-owner",
+  "purpose": "Produce a concise, traceable briefing while minimizing verified execution expenditure.",
+  "required_types": [
+    "report.markdown"
+  ],
+  "title": "Create a verified model-first capability brief",
+  "weights": {
+    "carbon_g": 0.06,
+    "data_exposure": 0.12,
+    "expected_energy_j": 0.35,
+    "failure_probability": 0.08,
+    "human_minutes": 0.1,
+    "latency_ms": 0.12,
+    "money": 0.08,
+    "semantic_loss": 0.09
+  }
+}

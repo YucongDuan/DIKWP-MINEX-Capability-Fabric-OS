@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use DIKWP MINEX Capability Fabric OS, please cite this software."
+title: "DIKWP MINEX Capability Fabric OS"
+version: 1.0.0
+date-released: 2026-09-07
+authors:
+  - family-names: Duan
+    given-names: Yucong
+license: Apache-2.0
+repository-code: "https://github.com/YucongDuan/DIKWP-MINEX-Capability-Fabric-OS"
+keywords:
+  - capability routing
+  - model-first software
+  - computer use
+  - MCP
+  - A2A
+  - energy efficiency

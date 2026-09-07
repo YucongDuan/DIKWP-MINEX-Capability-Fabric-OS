@@ -1,0 +1,14 @@
+{
+  "selected_route_text": "local-text-stats → local-extractive-summary → local-markdown-compose\nExpected energy 14.78 J · 0.35 s · quality 0.86 · score 0.0379",
+  "why_panel": "Hard gates passed.\n\nThe route is on the Pareto frontier and has the lowest normalized score under your declared weights.\n\nExecution surfaces: local_code\nRequired scopes: data.read\nAuthority rule: no selected capability may expand the scopes you granted.",
+  "receipt_present": true,
+  "deterministic_route_id": true,
+  "route_id_second": "route-e55784e2",
+  "route_id": "route-e55784e2",
+  "language_toggle_before": "中文",
+  "language_toggle_after": "English",
+  "unexpected_network_requests": [],
+  "console_errors": [],
+  "page_errors": [],
+  "screenshot": "/mnt/data/work_functionweave/DIKWP_MINEX_CAPABILITY_FABRIC_OS_v1.0.0/validation/DIKWP_MINEX_BROWSER_SCREENSHOT_v1.0.0.png"
+}

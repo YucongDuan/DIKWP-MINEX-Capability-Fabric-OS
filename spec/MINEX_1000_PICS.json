@@ -1,0 +1,367 @@
+{
+  "standard": "MINEX-1000:2026-DRAFT",
+  "implementation": "DIKWP MINEX Capability Fabric OS",
+  "version": "1.0.0",
+  "date": "2026-09-07",
+  "claimed_level": "L4-reference",
+  "third_party_certification": false,
+  "requirements": [
+    {
+      "id": "M100",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M101",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M102",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M103",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M104",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M110",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M111",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M112",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M113",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M114",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M115",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M116",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M117",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M118",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M119",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M200",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M201",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M202",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M203",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M204",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M205",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M206",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M207",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M208",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M209",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M300",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M301",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M302",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M303",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M304",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M305",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M400",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M401",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M402",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M403",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M404",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M405",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M500",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M501",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M502",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M503",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M504",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M505",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M506",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M507",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M510",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M511",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M512",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M513",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M520",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M521",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M522",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M523",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M524",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M530",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M531",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M600",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M601",
+      "status": "partial",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M602",
+      "status": "partial",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M610",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M620",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M621",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M622",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M623",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M624",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M700",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M701",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M702",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M703",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    },
+    {
+      "id": "M704",
+      "status": "implemented",
+      "evidence": "Reference core, schemas, tests, or documentation. See repository."
+    }
+  ],
+  "summary": {
+    "total": 70,
+    "implemented": 68,
+    "partial": 2,
+    "not_claimed": 0
+  },
+  "reality_boundary": "Author-side self-assessment; not independent certification."
+}

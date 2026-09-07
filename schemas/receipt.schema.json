@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/minex/schemas/receipt.schema.json",
+  "title": "MINEX Execution Receipt",
+  "type": "object",
+  "required": ["receipt_type", "created_at", "intent_digest", "plan_digest", "status", "limitations", "receipt_digest", "automatic_external_action_authority"],
+  "properties": {
+    "receipt_type": {"const": "MINEX_EXECUTION_RECEIPT"},
+    "created_at": {"type": "string"},
+    "intent": {"type": "object"},
+    "intent_digest": {"type": "string"},
+    "selected_route": {"type": ["object", "null"]},
+    "plan_digest": {"type": "string"},
+    "execution": {"type": ["object", "null"]},
+    "execution_digest": {"type": ["string", "null"]},
+    "status": {"enum": ["VERIFIED_LOCAL_RESULT", "PLAN_ONLY"]},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "receipt_digest": {"type": "string"},
+    "automatic_external_action_authority": {"const": 0}
+  },
+  "additionalProperties": true
+}

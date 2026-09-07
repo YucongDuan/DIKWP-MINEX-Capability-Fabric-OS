@@ -1,0 +1,46 @@
+{
+  "capabilities": {
+    "pushNotifications": false,
+    "stateTransitionHistory": true,
+    "streaming": false
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/markdown"
+  ],
+  "description": "Plans minimum verified execution-expenditure routes across model-native, code, API, GUI, trusted peer, market, and human capabilities.",
+  "extensions": [
+    {
+      "description": "Reference implementation has no automatic external action authority.",
+      "required": true,
+      "uri": "https://github.com/YucongDuan/DIKWP-MINEX-Capability-Fabric-OS#authority-boundary"
+    }
+  ],
+  "name": "DIKWP MINEX Capability Fabric",
+  "protocolVersion": "1.0",
+  "security": [],
+  "securitySchemes": {},
+  "skills": [
+    {
+      "description": "Build a Pareto frontier under authority, quality, privacy, energy, time, and cost constraints.",
+      "examples": [
+        "Choose whether to reason directly, run code, call an API, use a GUI, borrow a peer function, or buy a service."
+      ],
+      "id": "plan-capability-route",
+      "name": "Plan capability route",
+      "tags": [
+        "routing",
+        "capabilities",
+        "energy",
+        "MCP",
+        "A2A",
+        "DIKWP"
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

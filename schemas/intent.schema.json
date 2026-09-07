@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/minex/schemas/intent.schema.json",
+  "title": "MINEX IntentSpec",
+  "type": "object",
+  "required": ["intent_id", "title", "purpose", "available_types", "required_types"],
+  "properties": {
+    "intent_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "purpose": {"type": "string", "minLength": 1},
+    "available_types": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "required_types": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "inputs": {"type": "object"},
+    "granted_scopes": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "owner_realm": {"type": "string"},
+    "currency": {"type": "string"},
+    "constraints": {"type": "object"},
+    "weights": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}}
+  },
+  "additionalProperties": false
+}
