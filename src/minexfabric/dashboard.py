@@ -1,5 +1,11 @@
 from __future__ import annotations
 
+if __package__:
+    from ._ui_presentation import localize_html as _ui_localize_html
+else:
+    from _ui_presentation import localize_html as _ui_localize_html
+
+
 import html
 import json
 from pathlib import Path
@@ -36,4 +42,4 @@ table{{width:100%;border-collapse:collapse}}th,td{{padding:9px;border-bottom:1px
 <div class="card"><h2>Pareto frontier</h2><table><thead><tr><th>Route</th><th>Expected energy (J)</th><th>Latency (s)</th><th>Money</th><th>Quality</th><th>Score</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div>
 <div class="card"><h2>Machine-readable plan</h2><pre>{html.escape(raw)}</pre></div>
 </main></body></html>"""
-    return write_text(output, doc)
+    return _ui_localize_html(write_text(output, _ui_localize_html(doc)))

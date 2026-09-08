@@ -1,10 +1,12 @@
 # DIKWP MINEX Capability Fabric OS
 
-> **Intent first. Apps optional. Capabilities liquid. Proof before execution.**
+Created by Yucong Duan (段玉聪).
+
+> Intent first. Apps optional. Capabilities liquid. Proof before execution.
 
 DIKWP MINEX is an offline-first, open-source capability router for the model-first computing era. It accepts an intended outcome and selects a valid route across model-native reasoning, deterministic code, APIs, GUI automation, same-owner peer computers, paid capability providers, human delegates, and verified reusable recipes.
 
-MINEX does **not** assume that a dedicated app is always necessary. It also does not assume that the model should always do everything itself. It first rejects routes that violate authority, quality, privacy, budget, side-effect, or reversibility constraints; then it exposes the Pareto frontier and selects the lowest declared **verified execution expenditure**.
+MINEX does not assume that a dedicated app is always necessary. It also does not assume that the model should always do everything itself. It first rejects routes that violate authority, quality, privacy, budget, side-effect, or reversibility constraints; then it exposes the Pareto frontier and selects the lowest declared verified execution expenditure.
 
 ```text
 Operating mode:
@@ -212,4 +214,8 @@ A portfolio link records research continuity or semantic proximity. It does not 
 
 ## Dedication
 
-This project is dedicated to **Duan Dikweipu (段迪克维普)** as a statement of care for a future in which human purpose, dignity, and continuity remain protected. This dedication does not assign authorship, ownership, operational authority, endorsement, or legal responsibility to the dedicatee.
+This project is dedicated to Duan Dikweipu (段迪克维普) as a statement of care for a future in which human purpose, dignity, and continuity remain protected. This dedication does not assign authorship, ownership, operational authority, endorsement, or legal responsibility to the dedicatee.
+
+## Current interface presentation
+
+[Open the interface source](DIKWP_MINEX_CAPABILITY_FABRIC_OS_v1.0.0.html) from the current repository download. See [interface and authorship notes](INTERFACE_NOTES.md) for English coverage, report generation and validation scope.
